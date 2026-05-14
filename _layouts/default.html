@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title"><a href="{{ "/" | prepend: site.baseurl }}">{{ site.title }}</a></h1>
+      <p class="site-description">{{ site.description }}</p>
+      <nav>
+        <a href="{{ "/" | prepend: site.baseurl }}">Home</a>
+        <a href="{{ "/about/" | prepend: site.baseurl }}">About</a>
+        <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}. Powered by <a href="https://jekyllrb.com">Jekyll</a> & <a href="https://pages.github.com">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>

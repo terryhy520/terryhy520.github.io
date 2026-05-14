@@ -1,0 +1,30 @@
+# Site settings
+title: Terry's Blog
+url: "https://terryhy520.github.io"
+baseurl: ""
+description: >
+  Exploring AI, Engineering, and Beyond
+
+# Your information
+author: terryhy520
+github_username: terryhy520
+
+# Build settings
+permalink: /archivers/:title
+plugins:
+ - jekyll-paginate
+ - jekyll-gist
+ - jemoji
+
+paginate: 6
+paginate_path: "page:num"
+
+highlighter: rouge
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
